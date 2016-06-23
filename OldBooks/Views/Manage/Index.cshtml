@@ -1,0 +1,41 @@
+﻿@model OldBooks.Models.IndexViewModel
+@{
+    ViewBag.Title = "Gerencie sua Conta";
+}
+
+<link href="~/fonts/font-awesome/css/font-awesome.css" rel="stylesheet" />
+
+<p class="text-success">@ViewBag.StatusMessage</p>
+<div>
+    <h2 align="center"><strong>Gerencie sua Conta</strong></h2>
+    <hr />
+    <div class="container" align="center">
+        <div class="row">
+            <div class="col-md-12">
+                <p>
+                    <a href="~/Manage/ChangePassword" class="btn btn-squared-default-plain btn-danger">
+                        <i class="fa fa-lock fa-5x"></i><br />
+                        <br />Mudar Senha
+                    </a>
+
+                    <a href="/Livros/Index" class="btn btn-squared-default-plain btn-success">
+                        <i class="fa fa-book fa-5x"></i><br />
+                        <br />Meus livros
+                    </a>
+                    <br />
+                    <br />
+                    <a href="/Home/Index" class="btn btn-squared-default-plain btn-primary">
+                        <i class="fa fa-dollar fa-5x"></i><br />
+                        <br />Livros a venda
+                    </a>
+
+                    <a href="/Categorias/Index" class="btn btn-squared-default-plain btn-warning">
+                        <i class="fa fa-pencil fa-5x"></i><br />
+                        <br />Categorias
+                    </a>
+
+                </p>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,116 @@
+﻿@model PagedList.IPagedList<OldBooks.BLL.Models.Livro>
+@using PagedList.Mvc;
+<link href="~/Content/PagedList.css" rel="stylesheet" />
+@{
+    ViewBag.Title = "Meus livros";
+}
+
+@if (TempData["confirmacao"] != null)
+{
+    <div class="alert alert-success">@TempData["confirmacao"]</div>
+}
+
+@if (TempData["atualizacao"] != null)
+{
+    <div class="alert alert-info">@TempData["atualizacao"]</div>
+}
+
+@if (TempData["exclusao"] != null)
+{
+    <div class="alert alert-danger">@TempData["exclusao"]</div>
+}
+
+<p>
+    @Html.ActionLink("Adicionar novo livro", "Create")
+</p>
+<p>
+    @Html.ActionLink("Adicionar nova categoria", "Create", "Categorias")
+</p>
+
+
+<div class="panel panel-default">
+    <div class="panel-heading"> Meus Livros</div>
+    <div class="panel-body">
+        <table class="table table-striped table-hover">
+            <tr>
+                <th>
+                    @Html.DisplayName("Titulo")
+                </th>
+
+                <th>
+                    @Html.DisplayName("Autor")
+                </th>
+                <th>
+                    @Html.DisplayName("Paginas")
+                </th>
+                <th>
+                    @Html.DisplayName("Ano")
+                </th>
+                <th>
+                    @Html.DisplayName("Valor")
+                </th>
+                <th>
+                    @Html.DisplayName("Quantidade")
+                </th>
+                <th>
+                    @Html.DisplayName("Categoria")
+                </th>
+                <th>
+                    Status
+                </th>
+                <th></th>
+            </tr>
+            @foreach (var item in Model)
+            {   
+                using (Html.BeginForm("Delete", "Livros", new { id = @item.LivroId }))
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Titulo)
+                        </td>
+
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Autor)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Paginas)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Ano)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Valor)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Quantidade)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Categoria.Nome)
+                        </td>
+                        <td>
+                            @{
+                                if (item.Quantidade > 0)
+                                {
+                                    <label class="label label-success">Em estoque</label>
+                                }
+                                else
+                                {
+                                    <label class="label label-danger">Indisponível</label>
+                                }
+
+                            }
+                        </td>
+                        <td>
+                            @Html.ActionLink("Atualizar", "Edit", new { id = item.LivroId }) |
+                            @Html.ActionLink("Detalhes", "Details", new { id = item.LivroId }) |
+                            <input type="submit" class="btn btn-link btn-xs" value="Excluir" onclick="return confirm('Excluir @item.Titulo ?') " />
+                        </td>
+                    </tr>
+                }
+            }
+        </table>
+    </div>
+
+</div>
+
+@Html.PagedListPager(Model, page => Url.Action("Index", new { pagina = page }))

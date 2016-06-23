@@ -1,0 +1,44 @@
+﻿@model PagedList.IPagedList<OldBooks.BLL.Models.Categoria>
+@using PagedList.Mvc;
+<link href="~/Content/PagedList.css" rel="stylesheet" />
+
+@{
+    ViewBag.Title = "Categorias";
+}
+
+<p>
+    @Html.ActionLink("Nova categoria", "Create")
+</p>
+
+<div class="panel panel-default">
+    <div class="panel-heading"> Categorias Cadastradas</div>
+    <div class="panel-body">
+        <table class="table table-striped table-hover">
+
+            <tr>
+                <th>
+                    @Html.DisplayName("Nome")
+                </th>
+                <th></th>
+            </tr>
+
+            @foreach (var item in Model)
+            {
+                using (Html.BeginForm("Delete", "Categorias", new { id = @item.CategoriaId }))
+                {
+
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Nome)
+                        </td>
+                        <td>
+                            @Html.ActionLink("Atualizar", "Edit", new { id = item.CategoriaId }, new { @class = "btn btn-xs btn-link" }) |
+                            <input type="submit" class="btn btn-link btn-xs" value="Excluir" onclick="return confirm('Excluir @item.Nome ?') " />
+                        </td>
+                    </tr>
+                }
+            }
+        </table>
+    </div>
+</div>
+@Html.PagedListPager(Model, page => Url.Action("Index", new { pagina = page }))

@@ -1,0 +1,18 @@
+﻿@using PagedList.Mvc
+@model PagedList.IPagedList<OldBooks.BLL.Models.Livro>
+<link href="~/Content/PagedList.css" rel="stylesheet" />
+
+@{
+    ViewBag.Title = "Produtos Disponiveis";
+}
+
+@foreach (var p in Model)
+{
+    @Html.Partial("SumarioLivros", p)
+}
+
+<div class="clearfix"></div>
+
+<div class="pull-right">
+    @Html.PagedListPager(Model, page => Url.Action("Index", new { pagina = page }), new PagedListRenderOptions { Display = PagedListDisplayMode.IfNeeded })
+</div>

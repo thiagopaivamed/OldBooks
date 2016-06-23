@@ -1,0 +1,34 @@
+﻿@model OldBooks.BLL.Models.Comentario
+
+@{
+    Layout = null;
+}
+
+<div class="panel panel-default">
+    <div class="panel panel-heading">Adicionar comentário</div>
+    <div class="panel-body">
+
+        @using (Html.BeginForm())
+        {
+            <div class="form-horizontal">
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                <div class="form-group">
+                    <label class="control-label col-md-2">Mensagem</label>
+                    <div class="col-md-10">
+                        @Html.TextAreaFor(model => model.Texto, new { @class = "form-control", placeholder = "Envie seu comentário", rows = "4" })
+                        @Html.ValidationMessageFor(model => model.Texto, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-md-offset-2 col-md-10">
+                        <input type="submit" value="Adicionar" class="btn btn-default btn-xs" />
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

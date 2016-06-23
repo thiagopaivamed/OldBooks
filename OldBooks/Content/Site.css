@@ -1,0 +1,190 @@
+﻿body {
+    padding-top: 130px;
+    padding-bottom: 20px;
+    background: #F2F2F2;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+.label, .control-label, .help-block, .checkbox, .radio {
+    font-size: 15px;
+}
+
+container body-content {
+    margin-top: 5px;
+}
+
+.sumario {
+    font-family: 'Open Sans', 'Arial', 'Helvetica', 'sans-serif';
+}
+
+.sumario img{
+    max-height: 175px;
+    max-width: 175px;
+}
+
+.sumario span.badge {
+    background: transparent;
+    color: gray;
+    font-size: 20px;
+}
+
+.sumario .btn-car {
+    font-size: 17px;
+    margin-top: -19px;
+    border-radius: 3px;
+    background: #f4c50a;
+    border: none;
+    color: black;
+}
+
+.navbar.navbar-inverse.navbar-fixed-top {
+    background: black;
+    border: none;
+    color: black;
+    border-bottom: 8px solid #FDD900;
+    padding: 20px;
+}
+
+.navbar-inverse .navbar-nav > li > a:hover, .navbar-inverse .navbar-nav > li > a:focus {
+    color: #FDD900;
+}
+
+.navbar-inverse .navbar-nav > li > a {
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.navbar-inverse .dropdown-menu > li > a:hover, .navbar-inverse .dropdown-menu > .active > a, .navbar-inverse .dropdown-menu > .active > a:hover {
+    background-color: black;
+}
+
+.navbar-inverse .btn-link:hover, .navbar-inverse .btn-link:focus {
+    color: #FDD900;
+}
+
+.navbar-inverse .dropdown-menu {
+    background-color: black;
+}
+
+.navbar-inverse .navbar-nav > .open > a, .navbar-inverse .navbar-nav > .open > a:hover, .navbar-inverse .navbar-nav > .open > a:focus {
+    background-color: black;
+    color: #FDD900;
+}
+
+footer p {
+    background: black;
+    color: white;
+    padding: 25px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.navbar-inverse .dropdown-menu > li > a, .navbar-inverse .dropdown-menu > li > a:focus {
+    font-size:17px;
+}
+
+.navbar-inverse .navbar-nav > li > a:hover, .navbar-inverse .navbar-nav > li > a:focus {
+    background-color: transparent;
+}
+
+.pagination > .active > a, .pagination > .active > span, .pagination > .active > a:hover, .pagination > .active > span:hover, .pagination > .active > a:focus, .pagination > .active > span:focus {
+    background: black;
+    border: none;
+    font-size: 15px;
+    font-weight: bold;
+    border: 1px solid black;
+}
+
+.pagination > li > a:hover, .pagination > li > span:hover, .pagination > li > a:focus, .pagination > li > span:focus {
+    background-color: black!important;
+    border: 1px solid black;
+    font-size: 15px;
+    color: #FDD900;
+    font-weight: bold;
+}
+
+.pagination > li > a, .pagination > li > span {
+    background-color: transparent;
+    border: 1px solid black;
+    font-size: 15px;
+    color: black;
+    font-weight: bold;
+}
+
+.pagination > .active > a, .pagination > .active > span, .pagination > .active > a:hover, .pagination > .active > span:hover, .pagination > .active > a:focus, .pagination > .active > span:focus {
+    background-color: black!important;
+    border-color: black!important;
+}
+
+hr {
+    border-top: 1px solid black;
+}
+
+.panel-heading{
+    background: #FDD900!important;
+    font-weight: bold!important;
+    border: none!important;
+}
+
+.panel {
+    border-radius: 5px;
+}
+
+.text-primary {
+    color: black!important;
+}
+
+.container hr {
+    margin-right: 30px;
+}
+
+table {
+    font-size: 15px!important;
+}
+
+input.btn-link, .btn-link {
+    font-size: 15px!important;
+}
+
+.btn.btn-primary:not(.btn-squared-default-plain), .btn.btn-default:not(.btn-squared-default-plain) {
+    background: #FDD900;
+    border: none;
+    color: black;
+    font-weight: bold;
+    border-radius: 4px;
+    width: 100px;
+}
+
+.btn.btn-primary.btn-file {
+    width: 125px;
+    border: 1px solid #FDD900;
+}
+
+.btn-squared-default-plain {
+    width: 236px !important;
+    height: 229px !important;
+    font-size: 25px;
+    margin: 30px;
+    margin-bottom: 0px;
+    border-radius: 10px;
+    padding: 15px;
+}

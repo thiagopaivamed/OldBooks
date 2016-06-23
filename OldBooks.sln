@@ -1,0 +1,49 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.40629.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OldBooks", "OldBooks\OldBooks.csproj", "{7ADC5160-8411-4927-B631-4F39F1A6863F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OldBooks.BLL", "OldBooks.BLL\OldBooks.BLL.csproj", "{ACCEFAD1-C926-450B-AC2D-97B9A03B1D1E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OldBooks.DAL", "OldBooks.DAL\OldBooks.DAL.csproj", "{B2D5759E-D74C-43F1-8A47-0B321197A138}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 4
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://thiagopaivamed.visualstudio.com/defaultcollection
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = OldBooks.BLL\\OldBooks.BLL.csproj
+		SccProjectName1 = OldBooks.BLL
+		SccLocalPath1 = OldBooks.BLL
+		SccProjectUniqueName2 = OldBooks.DAL\\OldBooks.DAL.csproj
+		SccProjectName2 = OldBooks.DAL
+		SccLocalPath2 = OldBooks.DAL
+		SccProjectUniqueName3 = OldBooks\\OldBooks.csproj
+		SccProjectName3 = OldBooks
+		SccLocalPath3 = OldBooks
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7ADC5160-8411-4927-B631-4F39F1A6863F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7ADC5160-8411-4927-B631-4F39F1A6863F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7ADC5160-8411-4927-B631-4F39F1A6863F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7ADC5160-8411-4927-B631-4F39F1A6863F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ACCEFAD1-C926-450B-AC2D-97B9A03B1D1E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ACCEFAD1-C926-450B-AC2D-97B9A03B1D1E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ACCEFAD1-C926-450B-AC2D-97B9A03B1D1E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ACCEFAD1-C926-450B-AC2D-97B9A03B1D1E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B2D5759E-D74C-43F1-8A47-0B321197A138}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B2D5759E-D74C-43F1-8A47-0B321197A138}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B2D5759E-D74C-43F1-8A47-0B321197A138}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B2D5759E-D74C-43F1-8A47-0B321197A138}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

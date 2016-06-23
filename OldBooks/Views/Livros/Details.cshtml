@@ -1,0 +1,52 @@
+﻿@using Microsoft.AspNet.Identity
+@using OldBooks.BLL.Models
+@model OldBooks.BLL.Models.Livro
+
+@{
+    ViewBag.Title = "Detalhes";
+}
+
+<h3><strong>@Model.Titulo</strong></h3>
+<h5><strong>Autor: @Model.Autor</strong></h5>
+<hr />
+
+<div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <img style='float:left' src="@Url.Content(@Model.Foto)" class="img-rounded img-thumbnail img-responsive" width="200" height="200" />
+                <div class="col-md-4 text-justify">
+                    <h5>
+                        <strong>@Html.DisplayNameFor(model => model.Paginas): </strong> @Html.DisplayFor(model => model.Paginas) <br /><br />
+                        <strong>@Html.DisplayNameFor(model => model.Ano): </strong> @Html.DisplayFor(model => model.Ano)<br /><br />
+                        <strong>@Html.DisplayNameFor(model => model.Valor): </strong> @Html.DisplayFor(model => model.Valor)<br /><br />
+                        <strong>Categoria:</strong> @Html.DisplayFor(model => model.Categoria.Nome)<br /><br />
+                        <strong>@Html.DisplayNameFor(model => model.Valor):</strong> @Html.DisplayFor(model => model.Valor)<br /><br />
+                        <strong>Quantidade Dispónivel: </strong> @Html.DisplayFor(model => model.Quantidade)<br /><br />
+                    </h5>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <br />
+
+    <h5><strong>@Html.DisplayNameFor(model => model.Descricao)</strong></h5>
+    <h5>@Html.DisplayFor(model => model.Descricao)</h5>
+
+    <br />
+    <br />
+
+    <br />
+
+
+    @{
+        Html.RenderAction("Create", "Comentarios", new { id = @Model.LivroId });
+
+    }
+
+    @{
+        Html.RenderAction("Index", "Comentarios", new { id = @Model.LivroId });
+
+    }
+</div>
